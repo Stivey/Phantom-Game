@@ -16,20 +16,20 @@
 [ext_resource path="res://save.gd" type="Script" id=14]
 [ext_resource path="res://portal_rama.png" type="Texture" id=15]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 6 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 42.9373, 24.0623 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 34.1904, 23.2141 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 28.1433, 26.0504 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 30
 font_data = ExtResource( 6 )
 
@@ -75,6 +75,7 @@ position = Vector2( 2780.47, 826.93 )
 position = Vector2( 2880.04, 1737.49 )
 
 [node name="Area2D" parent="Node2D3" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -1311.33, 204.873 )
 script = ExtResource( 4 )
 
@@ -88,7 +89,7 @@ margin_top = -27.4624
 margin_right = 279.867
 margin_bottom = 3.5376
 rect_rotation = -22.4036
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "<- in"
 
 [node name="Label2" type="Label" parent="Node2D3/Area2D/portal_out"]
@@ -97,7 +98,7 @@ margin_top = -40.7588
 margin_right = -22.6258
 margin_bottom = -9.75879
 rect_rotation = 30.6341
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "out"
 
 [node name="Area2D2" type="Area2D" parent="Node2D3"]
@@ -105,7 +106,7 @@ script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D3/Area2D2"]
 position = Vector2( 14, 6 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2( 1, 1 )
@@ -128,7 +129,7 @@ position = Vector2( 2558.12, 644.214 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Area2D1"]
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1587.19, -253.826 )
@@ -137,7 +138,7 @@ position = Vector2( 1587.19, -253.826 )
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 11 )
@@ -146,7 +147,8 @@ tile_data = PoolIntArray( -327687, -1610612735, 0, -327686, 1610612736, 0, -3276
 script = ExtResource( 12 )
 
 [node name="Player" parent="." instance=ExtResource( 13 )]
-position = Vector2( 266.105, 546.863 )
+position = Vector2( 261.822, 518.743 )
+scale = Vector2( 0.98, 1.01999 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -0.146729, 0.113647 )
@@ -159,7 +161,7 @@ margin_left = 283.537
 margin_top = -258.96
 margin_right = 478.537
 margin_bottom = -179.96
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "save"
 script = ExtResource( 14 )
 

@@ -11,7 +11,6 @@ extents = Vector2( 32, 32 )
 extents = Vector2( 32, 32 )
 
 [sub_resource type="StreamTexture" id=3]
-load_path = "res://.import/fakel.png-215efd67f9b15fd041faf26ef4372ce7.stex"
 
 [resource]
 0/name = "Sprite"
